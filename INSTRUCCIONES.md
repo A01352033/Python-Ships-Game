@@ -30,7 +30,7 @@
 
 ## Créditos
 
-- Este juego fue creado por [Manuel Villalpando y Oliver Vazquez].
+- Este juego fue creado por Manuel Villalpando y Oliver Vazquez.
 - Utiliza el módulo `freegames` para la funcionalidad de los juegos.
 
 ## Notas

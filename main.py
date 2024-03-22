@@ -16,7 +16,7 @@ ship_shape = [
 
 # Variables
 ship_speed = 20
-asteroid_speed = 3
+asteroid_speed = 0.5
 asteroid_spawn_interval = 50  # Menor valor = más asteroides
 score = 0
 game_over = False
@@ -34,10 +34,11 @@ def create_asteroid():
 
 def move_asteroids():
     global asteroid_speed
+    global asteroid_spawn_interval
     for asteroid in asteroids:
         asteroid.x -= asteroid_speed
     # Aumentar la velocidad de los asteroides con el tiempo
-    asteroid_speed += 0.001
+    asteroid_speed += 0.005
 
 def draw_ship():
     up()
@@ -63,7 +64,7 @@ def check_collision():
     global score, game_over
 
     for asteroid in asteroids:
-        if abs(ship - asteroid) < 20:  # Ajustamos el valor de colisión
+        if abs(ship - asteroid) < 18.5:  # Ajustamos el valor de colisión
             game_over = True
 
 def display_score():
@@ -108,6 +109,9 @@ while not game_over:
 
     # Aumentar puntuación
     score += 1
+    if (score % 100) == 0:
+        asteroid_spawn_interval -= 3
+        asteroid_speed += 0.01
 
 # Mostrar mensaje de fin de juego
 game_over_message()

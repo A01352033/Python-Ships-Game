@@ -2,7 +2,7 @@
 
 **Autores:**
 - _Manuel Villalpando Linares A01352033_
-- _Oliver Vazquez_
+- _Oliver Vazquez Lima A01738020_
 
 Some basic Git commands are:
 ```
